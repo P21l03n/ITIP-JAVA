@@ -64,9 +64,7 @@ public class task1 {
         return(ch*2+c*4+p*4);
     }
     public static boolean profitableGamble(double prob, double prize, double pay){
-        if (prob*prize > pay)
-        return true;
-        else
+        if (prob*prize > pay) return true;
         return false;
     }
     public static String operation(int n, int a, int b){
@@ -107,9 +105,7 @@ public class task1 {
         for(int i=0; i<b; i++){
            a+=a;
         }
-        if (a%c==0)
-        return true;
-        else
+        if (a%c==0) return true;
         return false;
     }
 }
