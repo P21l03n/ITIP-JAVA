@@ -62,8 +62,8 @@ public class task2 {
         }
         return rep;
     }
-    public static int differenceMaxMin(int [] a){// task 2; функцию, которая принимает массив и возвращает разницу между
-        //самыми большими и самыми маленькими числами.
+    // task 2; функцию, которая принимает массив и возвращает разницу между самыми большими и самыми маленькими числами.
+    public static int differenceMaxMin(int [] a){
         int max = a[0];
         int min = a[0];
     for (int i = 0; i < a.length; i++) {
@@ -71,6 +71,7 @@ public class task2 {
         if(a[i] < min){min = a[i];}
     }
     return (max -min);}
+    // task 3;функцию, которая принимает массив в качестве аргумента и возвращает true или false в зависимости от того, является ли среднее значение всех элементов массива целым числом или нет.
     public static boolean isAvgWhole(int [] a){
         int s=0;
         int k=a.length;
@@ -80,7 +81,7 @@ public class task2 {
         if (s%k==0)return true;
         return false;
     }
-
+    // task 4; метод, который берет массив целых чисел и возвращает массив, в котором каждое целое число является суммой самого себя + всех предыдущих чисел в массиве.
     public static String cumulativeSum(int [] a){
         int len =a.length;
         String anew = new String();
@@ -91,6 +92,7 @@ public class task2 {
         }
         return anew;
     } 
+    // task 5; функцию, которая возвращает число десятичных знаков, которое имеет число (заданное в виде строки).
     public static int getDecimalPlaces(String s){
         int num=0;
         for (int i = 0; i < s.length(); i++){
@@ -99,6 +101,7 @@ public class task2 {
         }
         return num;
     }
+    // task 6; функцию, которая при заданном числе возвращает соответствующее число Фибоначчи.
     public static int Fibonacci(int x){
         int a1 = 1;
         int a2 = 1;
@@ -109,8 +112,9 @@ public class task2 {
         }
         return a2;
     }
+    // task 7; функцию, чтобы определить, является ли вход действительным почтовым индексом.
     public static boolean isValid(String s){
-        if (s.length()==5){
+        if (s.length()<=5){
             char[] ch = s.toCharArray();
             int k=0;
             for (int i=0; i<s.length(); i++){
@@ -121,12 +125,14 @@ public class task2 {
         }
         return false;
     }
+    // task 8; функцию, которая возвращает true, если пара строк представляет собой странную пару, и false в противном случае.
     public static boolean isStrangePair(String x, String y){
         int lenx=x.length();
         int leny=y.length();
         if (x.charAt(0)==y.charAt(leny-1) && y.charAt(0)==x.charAt(lenx-1))return true;
         return false;
     }
+    // task 9; isPrefix должен возвращать true, если он начинается с префиксного аргумента.
     public static boolean isPrefix(String x, String y){
         int k=0;
         for (int i=0; i<y.length()-1; i++){
@@ -135,6 +141,7 @@ public class task2 {
         if (k==y.length()-1)return true;
         return false;
     }
+    //– isSuffix должен возвращать true, если он заканчивается аргументом суффикса.
     public static boolean isSuffix(String x, String y){
         int k=0;
         int len=x.length()-y.length();
@@ -144,6 +151,7 @@ public class task2 {
         if (k==y.length()-1)return true;
         return false;
     }
+    // task 10; функцию, которая принимает число (шаг) в качестве аргумента и возвращает количество полей на этом шаге последовательности.
     public static int boxSeq(int a){
         int s = 0;
         for (int i=1; i<=a; i++){
